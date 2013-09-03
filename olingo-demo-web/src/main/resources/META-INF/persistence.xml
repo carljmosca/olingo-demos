@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="sampleDb" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <non-jta-data-source>java:comp/env/jdbc/sampledb</non-jta-data-source>
+    <class>com.github.olingo.demo.jpa.model.Customer</class>
+    <class>com.github.olingo.demo.jpa.model.DiscountCode</class>
+    <class>com.github.olingo.demo.jpa.model.Manufacturer</class>
+    <class>com.github.olingo.demo.jpa.model.MicroMarket</class>
+    <class>com.github.olingo.demo.jpa.model.Product</class>
+    <class>com.github.olingo.demo.jpa.model.ProductCode</class>
+    <class>com.github.olingo.demo.jpa.model.PurchaseOrder</class>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.max_fetch_depth" value="3"/>
+      <!--            <property name="hibernate.jdbc.use_scrollable_resultset" value="false"/>-->
+      <property name="hibernate.jdbc.use_scrollable_resultset" value="false"/>        
+    </properties>
+  </persistence-unit>
+</persistence>

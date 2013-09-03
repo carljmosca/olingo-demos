@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/olingo-demo-web">
+      <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" 
+                factory="org.apache.commons.dbcp.BasicDataSourceFactory" 
+                maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/sampledb" password="" type="javax.sql.DataSource" 
+                url="jdbc:mysql://localhost/sampledb" 
+                username="root"/>
+
+</Context>

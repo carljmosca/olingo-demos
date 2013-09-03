@@ -1,1 +1,4 @@
 /olingo-demo-jpa/target/
+/olingo-demo-web/target/
+/olingo-demo-web/cmecf-odata-demo-bk-server/target/
+/olingo-demo-web/cmecf-odata-demo-client/target/

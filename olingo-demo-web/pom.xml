@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github</groupId>
+    <artifactId>olingo-demo-web</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- required for correct Sonar coverage data reporting (list of artifactIds) -->
+        <projectsToInstrument>com.sap.core.odata.api,com.sap.core.odata.core,com.sap.core.odata.ref</projectsToInstrument>
+        <sonar.skippedModules>com.sap.core.odata.expr</sonar.skippedModules>
+        <jax.ws.rs.version>2.0-m10</jax.ws.rs.version>
+        <!-- <jsr311.version>1.1.1</jsr311.version> -->
+        <joda.version>2.1</joda.version>
+        <cxf.version>2.7.5</cxf.version>
+        <jetty.version>7.5.4.v20111024</jetty.version>
+        <httpclient.version>4.2.3</httpclient.version>
+        <slf4j.version>1.7.1</slf4j.version>
+        <commonscodec.version>1.6</commonscodec.version>
+        <commonslang.version>3.1</commonslang.version>
+        <gson.version>2.2.2</gson.version>
+
+        <antlr.version>3.4</antlr.version>
+
+        <mockito.version>1.9.0</mockito.version>
+        <junit.version>4.10</junit.version>
+        <xmlunit.version>1.3</xmlunit.version>
+
+        <version.eclipselink>2.1.2</version.eclipselink>
+        <version.javax.persistence>2.0.5</version.javax.persistence>
+        <olingo.version>1.0.0-SNAPSHOT</olingo.version>
+    </properties>
+    <build>
+        <finalName>olingo-demo-web</finalName>
+
+        <resources>
+            <resource>
+                <directory>src/main/version</directory>
+                <filtering>true</filtering>
+                <targetPath>../${project.build.finalName}/gen</targetPath>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+
+        <plugins>
+            <plugin>
+                <groupId>com.sap.research</groupId>
+                <artifactId>nwcloud-maven-plugin</artifactId>
+                <version>1.0.0.RELEASE</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+	
+    <dependencies>
+        <dependency>
+            <!-- required because of auto detection of web facet 2.5 -->
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+        <!-- Olingo -->
+        <dependency>
+            <groupId>org.apache.olingo.odata2</groupId>
+            <artifactId>api</artifactId>
+            <version>${olingo.version}</version> 
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.olingo.odata2</groupId>
+            <artifactId>core</artifactId>
+            <version>${olingo.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.olingo.odata2</groupId>
+            <artifactId>jpa.processor.api</artifactId>
+            <version>${olingo.version}</version> 
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.olingo.odata2</groupId>
+            <artifactId>api.annotation</artifactId>
+            <version>${olingo.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.olingo.odata2</groupId>
+            <artifactId>jpa.processor.core</artifactId>
+            <version>${olingo.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>olingo-demo-jpa</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+        
+            <build>
+                <defaultGoal>cargo:run</defaultGoal>         
+          
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven2-plugin</artifactId>
+                        <version>1.4.2</version>
+                    </plugin>
+                </plugins>
+            </build>        
+        </profile>
+        <profile>
+            <id>cloudbuild</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.sap.core.js.catalina</groupId>
+                    <artifactId>com.sap.core.js.catalina.fragment</artifactId>
+                    <version>1.1.1</version>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+</project>
