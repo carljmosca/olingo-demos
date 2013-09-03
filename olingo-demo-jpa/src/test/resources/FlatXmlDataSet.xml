@@ -1,0 +1,22 @@
+<dataset>
+    <micro_market zip_code="12345" area_length="10.0" area_width="10.0" radius="5.0" />
+    <micro_market zip_code="12346" area_length="10.0" area_width="10.0" radius="5.0" />
+    <micro_market zip_code="12347" area_length="10.0" area_width="10.0" radius="5.0" />
+    <micro_market zip_code="98765" area_length="10.0" area_width="10.0" radius="5.0" />
+    <micro_market zip_code="33333" area_length="10.0" area_width="10.0" radius="5.0" />
+    <micro_market zip_code="77777" area_length="10.0" area_width="10.0" radius="5.0" />
+    <discount_code discount_code="1" rate="0.05" />
+    <discount_code discount_code="2" rate="0.06" />
+    <discount_code discount_code="3" rate="0.07" />
+    <discount_code discount_code="4" rate="0.08" />
+    <discount_code discount_code="5" rate="0.10" />
+    <customer customer_id="1" name="John Smith" addressline1="123 Main St" city="Paris" state="CA" zip="12345" phone="401.123.1234" discount_code="1" />
+    <customer customer_id="2" name="Fred Flintstone" addressline1="987 Main St" city="Lakeland" state="FL" zip="12345" phone="401.123.1234" discount_code="3" />
+    <customer customer_id="3" name="Barney Fife" addressline1="202 Elm St" city="Plainfield" state="CA" zip="12345" phone="401.123.1234" discount_code="4" />
+    <customer customer_id="4" name="Joe Jones" addressline1="101 Broad St" city="Anytown" state="CA" zip="12345" phone="401.123.1234" discount_code="2" />
+    <customer customer_id="5" name="Linda Thompson" addressline1="506 East 22nd St" city="Dallas" state="CA" zip="12345" phone="401.123.1234" discount_code="5" />
+    <manufacturer manufacturer_id="1" addressline1="12 North Boulevard" city="London" state="MA" phone="888.111.2222" zip="77777" />
+    <product_code prod_code="99" description="popular test item" discount_code="5" />
+    <product product_id="1" description="really popular test item" product_code="99" manufacturer_id="1" />
+    <purchase_order order_num="100" quantity="100" customer_id="5" product_id="1" freight_company="Great Movers" />
+</dataset>
