@@ -11,12 +11,21 @@
     <discount_code discount_code="4" rate="0.08" />
     <discount_code discount_code="5" rate="0.10" />
     <customer customer_id="1" name="John Smith" addressline1="123 Main St" city="Paris" state="CA" zip="12345" phone="401.123.1234" discount_code="1" />
-    <customer customer_id="2" name="Fred Flintstone" addressline1="987 Main St" city="Lakeland" state="FL" zip="12345" phone="401.123.1234" discount_code="3" />
-    <customer customer_id="3" name="Barney Fife" addressline1="202 Elm St" city="Plainfield" state="CA" zip="12345" phone="401.123.1234" discount_code="4" />
-    <customer customer_id="4" name="Joe Jones" addressline1="101 Broad St" city="Anytown" state="CA" zip="12345" phone="401.123.1234" discount_code="2" />
-    <customer customer_id="5" name="Linda Thompson" addressline1="506 East 22nd St" city="Dallas" state="CA" zip="12345" phone="401.123.1234" discount_code="5" />
+    <customer customer_id="2" name="Fred Flintstone" addressline1="987 Main St" city="Lakeland" state="FL" zip="12345" phone="901.867.5309" discount_code="3" />
+    <customer customer_id="3" name="Barney Fife" addressline1="202 Elm St" city="Plainfield" state="CA" zip="12345" phone="601.123.6644" discount_code="4" />
+    <customer customer_id="4" name="Joe Jones" addressline1="101 Broad St" city="Anytown" state="AK" zip="12345" phone="201.123.4422" discount_code="2" />
+    <customer customer_id="5" name="Linda Thompson" addressline1="506 East 22nd St" city="Dallas" state="TX" zip="12345" phone="818.123.5678" discount_code="5" />
     <manufacturer manufacturer_id="1" addressline1="12 North Boulevard" city="London" state="MA" phone="888.111.2222" zip="77777" />
     <product_code prod_code="99" description="popular test item" discount_code="5" />
+    <product_code prod_code="98" description="no. 2 pencil" discount_code="1" />
+    <product_code prod_code="97" description="staple gun" discount_code="3" />
+    <product_code prod_code="96" description="hammer" discount_code="5" />
+    <product_code prod_code="95" description="extension cord" discount_code="4" />
+    <product_code prod_code="94" description="mouse trap" discount_code="2" />
+    <product_code prod_code="93" description="secret widget" discount_code="2" />
+    <product_code prod_code="92" description="paper clips" discount_code="3" />
+    <product_code prod_code="91" description="duct tape" discount_code="3" />
+    <product_code prod_code="90" description="fabric softener" discount_code="5" />
     <product product_id="1" description="really popular test item" product_code="99" manufacturer_id="1" />
     <purchase_order order_num="100" quantity="100" customer_id="5" product_id="1" freight_company="Great Movers" />
 </dataset>
