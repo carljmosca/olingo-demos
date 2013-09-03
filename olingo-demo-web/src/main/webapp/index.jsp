@@ -45,24 +45,14 @@
                     </ul>
                     <h3>EntitySets</h3>
                     <ul>
-                        <li><a href="OlingoDemo.svc/Customers" target="_blank">Cases</a></li>
-                        <li><a href="OlingoDemo.svc/Managers" target="_blank">Managers</a></li>
-                        <li><a href="OlingoDemo.svc/Buildings" target="_blank">Buildings</a></li>
-                        <li><a href="OlingoDemo.svc/Rooms" target="_blank">Rooms</a></li>
-                        <li><a href="OlingoDemo.svc/Container2.Photos"
-                               target="_blank">Container2.Photos</a></li>
+                        <li><a href="OlingoDemo.svc/Customers" target="_blank">Customers</a></li>
+                        <li><a href="OlingoDemo.svc/DiscountCodes" target="_blank">DiscountCodes</a></li>
+                        <li><a href="OlingoDemo.svc/Manufacturers" target="_blank">Manufacturers</a></li>
                     </ul>
                     <h3>Entities</h3>
                     <ul>
-                        <li><a href="OlingoDemo.svc/Cases(1)"
-                               target="_blank">Employees('1')</a></li>
-                        <li><a href="OlingoDemo.svc/Managers('1')"
-                               target="_blank">Managers('1')</a></li>
-                        <li><a href="OlingoDemo.svc/Buildings('1')"
-                               target="_blank">Buildings('1')</a></li>
-                        <li><a href="OlingoDemo.svc/Rooms('1')" target="_blank">Rooms('1')</a></li>
-                        <li><a href="OlingoDemo.svc/Container2.Photos(Id=4,Type='foo')"
-                               target="_blank">Container2.Photos(Id=4,Type='foo')</a></li>
+                        <li><a href="OlingoDemo.svc/Customers(1)"
+                               target="_blank">Customers('1')</a></li>
                     </ul>
                 </td>
                 <td valign="top">
